@@ -3,9 +3,9 @@ Para selseccionar el DAO por linea de comando es "sql o mongo", y por defecto in
 El factory está en el Constructor del DAO.
 
 El Singleton está en la carpeta utils/persistencia
-
-"dependencies": {
+  "dependencies": {
     "autocannon": "^7.9.0",
+    "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
@@ -32,10 +32,13 @@ El Singleton está en la carpeta utils/persistencia
     "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
   }
-
 "scripts": {
-    "test": "node benchmark.js",
+    "test": "mocha test/mochaProductos.js --exit",
     "dev": "nodemon index.js",
     "start": "node index.js"
+  },
